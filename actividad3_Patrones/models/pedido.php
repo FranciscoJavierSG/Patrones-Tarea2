@@ -1,45 +1,33 @@
 <?php
+namespace FactoryMethod;
 
-namespace models;
-
-/**
- * Pedido
- */
-class Pedido {
-    public $fecha;
-    public $estado; //Pendiente, Pagado, Procesando, Enviado, Entregado
+abstract class Pedido
+{
+    /**
+     * 
+     * @var double
+     */
+    public $cantidad;
+    public $statusPago;
+    
+    /**
+     *
+     * @param double $cantidad            
+     */
+    public function __construct($cantidad)
+    {
+        $this->cantidad = $cantidad;
+    }
 
     /**
-     * __construct
      *
-     * @param  mixed $fecha
-     * @param  mixed $estado
-     * 
+     * @return boolean
+     */
+    public abstract function valida();
+
+    /**
      * @return void
      */
-
-    public function __construct($fecha, $estado) {
-        $this->fecha = $fecha;
-        $this->estado = $estado;
-    }
-
-    public function getFecha() {
-        return $this->fecha;
-    }
-
-    public function getEstado() {
-        return $this->estado;
-    }
-
-    public function calcularTotal() {
-        //pensar
-    }
-
-    public function mostrar() {
-        return json_encode(array(
-            'fecha' => $this->fecha,
-            'estado' => $this->estado,
-            'total' => $this->calcularTotal()
-        ), JSON_PRETTY_PRINT);
-    }
+    public abstract function paga();
 }
+?>
