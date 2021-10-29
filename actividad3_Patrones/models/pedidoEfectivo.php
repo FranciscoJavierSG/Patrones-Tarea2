@@ -19,7 +19,7 @@ class PedidoEfectivo extends Pedido
     public function paga()
     {
         
-                 $this->statusPago=array(
+                 $this->estadoPedido=array(
                     'tipoPago' =>  "Efectivo",
                     'cantidad' =>  number_format($this->cantidad, 2, ',', ' '),
                     'pagoRealizado' =>  true,

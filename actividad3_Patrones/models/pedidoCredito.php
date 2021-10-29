@@ -18,7 +18,7 @@ class PedidoCredito extends Pedido
     public function paga()
     {
   
-        $this->statusPago=array(
+        $this->estadoPedido=array(
             'tipoPago' =>  "Credito",
             'cantidad' =>  number_format($this->cantidad, 2, ',', ' '),
             'pagoRealizado' =>  true,
