@@ -1,8 +1,8 @@
 <?php
 namespace FactoryMethod;
 
-require_once 'Cliente.php';
-require_once 'PedidoCredito.php';
+require_once 'cliente.php';
+require_once 'pedidoCredito.php';
 
 class ClienteCredito extends Cliente
 {

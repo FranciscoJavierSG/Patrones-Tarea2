@@ -2,7 +2,7 @@
 namespace FactoryMethod;
 
 //require_once '../Herramientas.class.php';
-require_once 'Pedido.php';
+require_once 'pedido.php';
 
 class PedidoEfectivo extends Pedido
 {

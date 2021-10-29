@@ -1,7 +1,7 @@
 <?php
 namespace FactoryMethod;
 
-require_once 'Pedido.php';
+require_once 'pedido.php';
 
 class PedidoCredito extends Pedido
 {
