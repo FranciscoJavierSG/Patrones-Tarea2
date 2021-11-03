@@ -1,5 +1,5 @@
 <?php
-namespace FactoryMethod;
+namespace factory_method;
 
 abstract class Pedido
 {

@@ -1,5 +1,5 @@
 <?php
-namespace FactoryMethod;
+namespace factory_method;
 
 require_once 'cliente.php';
 require_once 'pedidoEfectivo.php';

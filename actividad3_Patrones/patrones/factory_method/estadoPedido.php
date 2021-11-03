@@ -6,16 +6,16 @@ class EstadoPedido {
 
     public static function setEstado($estado) {
         if ($estado <= 1 || $estado > 5) {
-            return 'Pendiente';
+            return 'Nuevo pedido';
         }
         if ($estado == 2) {
-            return 'Pagado';
+            return 'Preparando pedido';
         }
         if ($estado == 3) {
-            return 'Procesado';
+            return 'Por pagar';
         }
         if ($estado == 4) {
-            return 'Enviado';
+            return 'Pagado';
         }
         if ($estado == 5) {
             return 'Entregado';
