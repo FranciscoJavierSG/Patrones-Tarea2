@@ -1,30 +1,12 @@
 <?php
 namespace AbstractFactory;
 
-abstract class PizzaNormal
+require_once 'pizza.php';
+
+
+class PizzaNormal extends Pizza
 {
-    /**
-     * 
-     * @var string
-     */
-    public $tipoMasa;
-    /**
-     * 
-     * @var string
-     */
-    public $tamaño;
-    /**
-     * 
-     * @var string
-     */
-    public $cantidadQueso;
-    /**
-     * 
-     * @var string
-     */
-    public $seleccionarIngredientes;
-    
-    /**
+/**
      *
      * @param string $tipoMasa            
      * @param string $tamaño            
@@ -32,25 +14,21 @@ abstract class PizzaNormal
      * @param string $seleccionarIngredientes // definir esto            
      * @return PizzaNormal
      */
-    public function __construct($tipoMasa, $tamaño, 
-        $cantidadQueso, $seleccionarIngredientes)
-    {
-        $this->tipoMasa = $tipoMasa;
-        $this->tamaño = $tamaño;
-        $this->cantidadQueso = $cantidadQueso;
-        $this->seleccionarIngredientes = $seleccionarIngredientes;
+    public function __construct($tipoMasa, $tamaño, $cantidadQueso,$seleccionarIngredientes) {
+        parent::__construct($tipoMasa, $tamaño, $cantidadQueso,$seleccionarIngredientes);
     }
 
-    public function muestraCaracteristicas(){     
+    public function muestraCaracteristicas()
+    {
+      
+
         return array(
-            'pizza' =>  "Normal",
+            'tipo' =>  "Electrico",
             'tipoMasa' =>  $this->tipoMasa,
-            'tamaño' => $this->tamaño,
-            'cantidadQueso' => $this->cantidadQueso,
-            'seleccionarIngredientes' => $this->seleccionarIngredientes,
+        'tamaño' => $this->tamaño,
+        'cantidadQueso' => $this->cantidadQueso,
+        'seleccionarIngredientes' => $this->seleccionarIngredientes,
         );
     }
-    
 }
-
 ?>
