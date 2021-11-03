@@ -8,7 +8,7 @@ abstract class Pedido
      * @var double
      */
     public $cantidad;
-    public $estadoPedido = array("Nuevo pedido", "Preparando pedido", "Por pagar", "Pagado", "Entregado"); //Dominio????
+    // public $estadoPedido = array("Nuevo pedido", "Preparando pedido", "Por pagar", "Pagado", "Entregado"); //Dominio????
     
     /**
      *
