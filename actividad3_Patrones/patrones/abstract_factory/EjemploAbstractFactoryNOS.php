@@ -1,11 +1,11 @@
 <?php
 
-namespace AbstractFactory;
+namespace EjemploAbstractFactory;
 
 use Exception;
 
-require_once 'masaNormal.php';
-require_once 'masaDelgada.php';
+require_once 'masaNormal.class.php';
+require_once 'masaDelgada.class.php';
 
 class EjemploAbstractFactory
 {

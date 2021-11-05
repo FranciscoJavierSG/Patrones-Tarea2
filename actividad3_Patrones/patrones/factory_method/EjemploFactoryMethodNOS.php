@@ -4,8 +4,8 @@ namespace FactoryMethod;
 
 use Exception;
 
-require_once 'models/clienteCredito.php';
-require_once 'models/clienteEfectivo.php';
+require_once 'models/clienteCredito.class.php';
+require_once 'models/clienteEfectivo.class.php';
 
 class EjemploFactoryMethod
 {

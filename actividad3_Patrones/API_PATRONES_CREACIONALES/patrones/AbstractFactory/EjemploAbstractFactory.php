@@ -1,6 +1,6 @@
 <?php
 
-namespace AbstractFactory;
+namespace EjemploAbstractFactory;
 
 use Exception;
 

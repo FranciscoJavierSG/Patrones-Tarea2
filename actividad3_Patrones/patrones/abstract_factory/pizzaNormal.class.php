@@ -1,7 +1,7 @@
 <?php
 namespace AbstractFactory;
 
-require_once 'pizza.php';
+require_once 'pizza.class.php';
 
 
 class PizzaNormal extends Pizza

@@ -1,7 +1,7 @@
 <?php
 namespace AbstractFactory;
 
-abstract class PizzaNormal
+abstract class Pizza
 {
     /**
      * 

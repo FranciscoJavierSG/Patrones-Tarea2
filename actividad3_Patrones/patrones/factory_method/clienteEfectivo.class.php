@@ -1,8 +1,8 @@
 <?php
-namespace factory_method;
+namespace FactoryMethod;
 
-require_once 'cliente.php';
-require_once 'pedidoEfectivo.php';
+require_once 'cliente.class.php';
+require_once 'pedidoEfectivo.class.php';
 
 class ClienteEfectivo extends Cliente
 {

@@ -1,8 +1,7 @@
 <?php
-namespace factory_method;
+namespace FactoryMethod;
 
-require_once 'pedido.php';
-require_once 'estadoPedido.php';
+require_once 'pedido.class.php';
 
 class PedidoCredito extends Pedido
 {
@@ -18,10 +17,12 @@ class PedidoCredito extends Pedido
 
     public function paga()
     {
+  
         $this->estadoPedido=array(
             'tipoPago' =>  "Credito",
             'cantidad' =>  number_format($this->cantidad, 2, ',', ' '),
-            'estadoPedido' => $this->estado = EstadoPedido::setEstado(4)
+            'pagoRealizado' =>  true,
+        
         );
     }
 
@@ -31,3 +32,5 @@ class PedidoCredito extends Pedido
                  ($this->cantidad <= 5000.0);
     }
 }
+
+?>

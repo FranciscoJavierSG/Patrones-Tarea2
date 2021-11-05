@@ -1,7 +1,7 @@
 <?php
 namespace AbstractFactory;
 
-require_once 'pizza.php';
+require_once 'pizza.class.php';
 
 
 class PizzaDelgada extends Pizza
@@ -23,7 +23,7 @@ class PizzaDelgada extends Pizza
       
 
         return array(
-            'tipo' =>  "Normal",
+            'tipo' =>  "Delgada",
             'tipoMasa' =>  $this->tipoMasa,
         'tamaño' => $this->tamaño,
         'cantidadQueso' => $this->cantidadQueso,

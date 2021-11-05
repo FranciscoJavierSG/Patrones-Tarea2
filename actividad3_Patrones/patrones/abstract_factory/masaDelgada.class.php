@@ -1,8 +1,8 @@
 <?php
 namespace AbstractFactory;
 
-require_once 'fabricaPizza.php';
-require_once 'pizzaDelgada.php';
+require_once 'fabricaPizza.class.php';
+require_once 'pizzaDelgada.class.php';
 //require_once 'ScooterElectrico.class.php';
 
 class masaDelgada implements FabricaPizza

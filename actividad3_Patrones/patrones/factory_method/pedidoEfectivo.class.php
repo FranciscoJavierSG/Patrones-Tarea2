@@ -1,8 +1,8 @@
 <?php
-namespace factory_method;
+namespace FactoryMethod;
 
 //require_once '../Herramientas.class.php';
-require_once 'pedido.php';
+require_once 'pedido.class.php';
 
 class PedidoEfectivo extends Pedido
 {
@@ -18,11 +18,13 @@ class PedidoEfectivo extends Pedido
 
     public function paga()
     {
-        $this->estadoPedido=array(
-        'tipoPago' =>  "Efectivo",
-        'cantidad' =>  number_format($this->cantidad, 2, ',', ' '),
-        'estadoPedido' => $this->estado = EstadoPedido::setEstado(4)
-        );
+        
+                 $this->estadoPedido=array(
+                    'tipoPago' =>  "Efectivo",
+                    'cantidad' =>  number_format($this->cantidad, 2, ',', ' '),
+                    'pagoRealizado' =>  true,
+                
+                );
     }
 
     public function valida()
@@ -30,3 +32,5 @@ class PedidoEfectivo extends Pedido
         return true;
     }
 }
+
+?>
