@@ -40,11 +40,11 @@ class EjemploAbstractFactory
 
             }
             //revisar bien esto
-            for ($i = 0; $i < $this->masaNormal; $i++) {
-                $autos[$i] = $fabrica->creaPizzaNormal('Normal'. 'Normal', 'extra', 'tomate' );
+            for ($i = 0; $i < $this->num_masaNormal; $i++) {
+                $masaNormal[$i] = $fabrica->creaPizzaNormal('Normal'. $i, 'Normal', 'extra', 'tomate' );
             }
-            for ($i = 0; $i < $this->num_scooters; $i++) {
-                $scooters[$i] = $fabrica->creaPizzaDelgada('Delgada'. 'Normal', 'extra', 'tomate');
+            for ($i = 0; $i < $this->num_masaDelgada; $i++) {
+                $masaDelgada[$i] = $fabrica->crearPizzaDelgada('Delgada'. $i, 'Normal', 'extra', 'tomate');
             }
 
 
