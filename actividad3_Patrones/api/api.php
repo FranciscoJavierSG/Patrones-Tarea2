@@ -77,6 +77,7 @@ class apiPatrones
                 $this->response(200, "Error000", "No se agrego JSON");
             } else {
 
+                
                 $ejemplo = new EjemploFactoryMethod($obj->opcion, $obj->monto, $obj->nombre, $obj->rut, $obj->correo);
               
                 $respuesta = $ejemplo->generar();
@@ -92,6 +93,38 @@ class apiPatrones
             exit;
         }    
 
+        if ($_GET['action'] == 'Catalogo') {
+            $obj = json_decode(file_get_contents('php://input'));
+            $objArr = (array) $obj;
+            if (empty($objArr)) {
+                $this->response(200, "Error000", "No se agrego JSON");
+            } else {
+
+                $ejemplo = new EjemploAbstractFactory($obj->opcion1, $obj->num_masaNormal, $obj->num_masaDelgada);
+                $respuesta = $ejemplo->generar();
+                // var_dump($respuesta);
+                if ($respuesta['Estado'] == 'success') {
+                    $this->response(200, "success", $respuesta['Response']);
+                } else {
+                    $this->response(200, "Error999", $respuesta['Response']);
+                    exit;
+                }
+            
+
+                $ejemplo = new EjemploFactoryMethod($obj->opcion2, $obj->monto, $obj->nombre, $obj->rut, $obj->correo);
+              
+                $respuesta = $ejemplo->generar();
+                // var_dump($respuesta);
+                if ($respuesta['Estado'] == 'success') {
+                    $this->response(200, "success", $respuesta['Response']);
+                } else {
+                    $this->response(200, "Error999", $respuesta['Response']);
+                    exit;
+                }
+            }
+
+            exit;
+        } 
         $this->response(400);
     }
 
