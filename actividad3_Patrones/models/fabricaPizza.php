@@ -1,8 +1,8 @@
 <?php
+
 namespace AbstractFactory;
 
-interface FabricaPizza
-{
+interface FabricaPizza {
 
     /**
      *
@@ -24,5 +24,3 @@ interface FabricaPizza
      */
     public function creaPizzaDelgada($tipoMasa, $tamaño, $cantidadQueso,  $seleccionarIngredientes);
 }
-
-?>

@@ -1,6 +1,6 @@
 <?php
 
-namespace factory_method;
+namespace FactoryMethod;
 
 class EstadoPedido {
 

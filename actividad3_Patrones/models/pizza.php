@@ -1,8 +1,8 @@
 <?php
+
 namespace AbstractFactory;
 
-abstract class Pizza
-{
+abstract class Pizza {
     /**
      * 
      * @var string
@@ -23,7 +23,7 @@ abstract class Pizza
      * @var string
      */
     public $seleccionarIngredientes;
-    
+
     /**
      *
      * @param string $tipoMasa            
@@ -33,8 +33,7 @@ abstract class Pizza
      */
 
 
-    public function __construct($tipoMasa, $tamaño, $cantidadQueso, $seleccionarIngredientes)
-    {
+    public function __construct($tipoMasa, $tamaño, $cantidadQueso, $seleccionarIngredientes) {
         $this->tipoMasa = $tipoMasa;
         $this->tamaño = $tamaño;
         $this->cantidadQueso = $cantidadQueso;
@@ -42,9 +41,4 @@ abstract class Pizza
     }
 
     public abstract function muestraCaracteristicas();
-
-    
-    
 }
-
-?>

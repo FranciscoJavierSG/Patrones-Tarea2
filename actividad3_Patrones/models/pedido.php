@@ -30,4 +30,3 @@ abstract class Pedido
      */
     public abstract function paga();
 }
-?>
