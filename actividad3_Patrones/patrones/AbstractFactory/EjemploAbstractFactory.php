@@ -1,11 +1,10 @@
 <?php
-
 namespace EjemploAbstractFactory;
 
 use Exception;
 
-require_once 'masaNormal.class.php';
-require_once 'masaDelgada.class.php';
+require_once 'models/masaNormal.class.php';
+require_once 'models/masaDelgada.class.php';
 
 class EjemploAbstractFactory
 {
@@ -30,6 +29,7 @@ class EjemploAbstractFactory
 
             switch ($this->opcion) {
                 case 1:
+                    //deberia ser masaNormal? o deberia llamar a otra cosa?
                     $fabrica = new masaNormal();
                     break;
                 case 2:
@@ -39,16 +39,14 @@ class EjemploAbstractFactory
                     throw new \Exception("Opción ".$this->opcion." desconocida --Opciones disponibles:: opc 1: masaNormal -opc 2: masaDelgada ");
 
             }
-
-            
-/*
+            //revisar bien esto
             for ($i = 0; $i < $this->masaNormal; $i++) {
-                $autos[$i] = $fabrica->elegirParametroNormal('SUV_N'. $i, 'amarillo', 6 + $i, 3.2);
+                $autos[$i] = $fabrica->creaPizzaNormal('Normal'. 'Normal', 'extra', 'tomate' );
             }
             for ($i = 0; $i < $this->num_scooters; $i++) {
-                $scooters[$i] = $fabrica->elegirParametroDelgada('clasico_N'. $i, 'rojo', 2 + $i);
+                $scooters[$i] = $fabrica->creaPizzaDelgada('Delgada'. 'Normal', 'extra', 'tomate');
             }
-*/
+
 
             $r = array("masaNormal" => $masaNormal,
                 "masaDelgada" => $masaDelgada);

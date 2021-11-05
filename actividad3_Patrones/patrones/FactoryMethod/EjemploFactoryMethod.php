@@ -1,11 +1,11 @@
 <?php
 
-namespace FactoryMethod;
+namespace EjemploFactoryMethod;
 
 use Exception;
 
-require_once 'models/clienteCredito.class.php';
-require_once 'models/clienteEfectivo.class.php';
+require_once 'models\clienteCredito.class.php';
+require_once 'models\clienteEfectivo.class.php';
 
 class EjemploFactoryMethod
 {

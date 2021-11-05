@@ -1,11 +1,12 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 
-require_once './patrones/abstract_factory/EjemploAbstractFactoryNOS.php';
-require_once './patrones/factory_method/EjemploFactoryMethodNOS.php';
+require_once './patrones/AbstractFactory/EjemploAbstractFactory.php';
+//require_once './patrones/FactoryMethod/EjemploFactoryMethod.php';
 
-use FactoryMethod\EjemploFactoryMethod;
 use AbstractFactory\EjemploAbstractFactory;
+//use FactoryMethod\EjemploFactoryMethod;
+
 
 
 class apiPatrones
@@ -20,7 +21,7 @@ class apiPatrones
                 break;
                 break;
             case 'POST': //actualiza
-                $this->EjemplosPatrones();
+                //$this->EjemplosPatrones();
                 break;
             case 'PUT': //inserta
                 echo 'METODO NO SOPORTADO';
@@ -44,7 +45,7 @@ class apiPatrones
         }
     }
 
-    public function EjemplosPatrones()
+   /* public function EjemplosPatrones()
     {
 
         if ($_GET['action'] == 'EjemploAbstractFactory') {
@@ -54,7 +55,7 @@ class apiPatrones
                 $this->response(200, "Error000", "No se agrego JSON");
             } else {
 
-                $ejemplo = new EjemploAbstractFactory($obj->opcion, $obj->num_autos, $obj->num_scooters);
+                $ejemplo = new EjemploAbstractFactory($obj->opcion, $obj->num_masaDelgada, $obj->num_masaNormal);
                 $respuesta = $ejemplo->generar();
                 // var_dump($respuesta);
                 if ($respuesta['Estado'] == 'success') {
@@ -69,7 +70,7 @@ class apiPatrones
         }
         
 
-        if ($_GET['action'] == 'EjemploFactoryMethod') {
+      /*  if ($_GET['action'] == 'EjemploFactoryMethod') {
             $obj = json_decode(file_get_contents('php://input'));
             $objArr = (array) $obj;
             if (empty($objArr)) {
@@ -88,11 +89,11 @@ class apiPatrones
             }
 
             exit;
-        }    
-
+        }    */
+/*
         $this->response(400);
     }
-
+*/
     
 
 }

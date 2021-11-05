@@ -2,10 +2,10 @@
 namespace AbstractFactory;
 
 require_once 'fabricaPizza.class.php';
-require_once 'pizzaNormal.class.php';
+require_once 'pizzaDelgada.class.php';
 //require_once 'ScooterElectrico.class.php';
 
-class masaNormal implements FabricaPizza
+class masaDelgada implements FabricaPizza
 {
 
     /**
@@ -14,11 +14,11 @@ class masaNormal implements FabricaPizza
      * @param string $tamaño            
      * @param string $cantidadQueso            
      * @param string $seleccionarIngredientes // definir esto            
-     * @return PizzaNormal
+     * @return PizzaDelgada
      */
-    public function elegirParametroNormal($tipoMasa, $tamaño, $cantidadQueso,  $seleccionarIngredientes)
+    public function crearPizzaDelgada($tipoMasa, $tamaño, $cantidadQueso,  $seleccionarIngredientes)
     {
-        return new PizzaNormal($tipoMasa, $tamaño, 
+        return new PizzaDelgada($tipoMasa, $tamaño, 
             $cantidadQueso,  $seleccionarIngredientes);
     }
 }
