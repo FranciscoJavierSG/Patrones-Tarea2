@@ -23,7 +23,6 @@ class PizzaNormal extends Pizza
       
 
         return array(
-            'tipo' =>  "Normal",
             'tipoMasa' =>  $this->tipoMasa,
         'tamaño' => $this->tamaño,
         'cantidadQueso' => $this->cantidadQueso,

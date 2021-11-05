@@ -1,6 +1,6 @@
 <?php
 
-
+/*
 use Exception;
 //AL FINAL COMENTEN TODO Y PUEDEN USAR LA API QUE ESTA AL FINAL EL CODIGO
 //SOLO HAY QUE COPIAR HTACCESS QUE ESTA EN LA CARPETA DE API DEL PROFE
@@ -67,7 +67,7 @@ use patrones\FactoryMethod\models\EstadoPedido;
 use patrones\FactoryMethod\models\Pedido;
 use patrones\FactoryMethod\models\PedidoCredito;
 use patrones\FactoryMethod\models\PedidoEfectivo;*/
-
+/*
 //nueva pizza normal
 $opcion=1;
 echo'nalgas';
@@ -92,10 +92,10 @@ echo'ESTA PIZZA ES NORMAL';
 echo$pizzaNormal;
 echo 'ESTA PIZZA ES DELGADA';
 echo$pizzaDelgada;
-
+*/
 ?>
-<?php/*
+<?php
     require_once "api/api.php";
     $apiPatrones = new apiPatrones();
-    $apiPatrones->api();*/
+    $apiPatrones->api();
 ?>

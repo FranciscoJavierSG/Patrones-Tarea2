@@ -2,10 +2,10 @@
 header('Content-Type: text/html; charset=utf-8');
 
 require_once './patrones/AbstractFactory/EjemploAbstractFactory.php';
-//require_once './patrones/FactoryMethod/EjemploFactoryMethod.php';
+require_once './patrones/FactoryMethod/EjemploFactoryMethod.php';
 
 use AbstractFactory\EjemploAbstractFactory;
-//use FactoryMethod\EjemploFactoryMethod;
+use FactoryMethod\EjemploFactoryMethod;
 
 
 
@@ -21,7 +21,7 @@ class apiPatrones
                 break;
                 break;
             case 'POST': //actualiza
-                //$this->EjemplosPatrones();
+                $this->EjemplosPatrones();
                 break;
             case 'PUT': //inserta
                 echo 'METODO NO SOPORTADO';
@@ -45,7 +45,7 @@ class apiPatrones
         }
     }
 
-   /* public function EjemplosPatrones()
+    public function EjemplosPatrones()
     {
 
         if ($_GET['action'] == 'EjemploAbstractFactory') {
@@ -55,7 +55,7 @@ class apiPatrones
                 $this->response(200, "Error000", "No se agrego JSON");
             } else {
 
-                $ejemplo = new EjemploAbstractFactory($obj->opcion, $obj->num_masaDelgada, $obj->num_masaNormal);
+                $ejemplo = new EjemploAbstractFactory($obj->opcion, $obj->num_masaNormal, $obj->num_masaDelgada);
                 $respuesta = $ejemplo->generar();
                 // var_dump($respuesta);
                 if ($respuesta['Estado'] == 'success') {
@@ -70,14 +70,15 @@ class apiPatrones
         }
         
 
-      /*  if ($_GET['action'] == 'EjemploFactoryMethod') {
+        if ($_GET['action'] == 'EjemploFactoryMethod') {
             $obj = json_decode(file_get_contents('php://input'));
             $objArr = (array) $obj;
             if (empty($objArr)) {
                 $this->response(200, "Error000", "No se agrego JSON");
             } else {
 
-                $ejemplo = new EjemploFactoryMethod($obj->opcion, $obj->monto);
+                $ejemplo = new EjemploFactoryMethod($obj->opcion, $obj->monto, $obj->nombre, $obj->rut, $obj->correo);
+              
                 $respuesta = $ejemplo->generar();
                 // var_dump($respuesta);
                 if ($respuesta['Estado'] == 'success') {
@@ -89,11 +90,11 @@ class apiPatrones
             }
 
             exit;
-        }    */
-/*
+        }    
+
         $this->response(400);
     }
-*/
+
     
 
 }

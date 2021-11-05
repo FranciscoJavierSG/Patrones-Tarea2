@@ -11,6 +11,7 @@ abstract class Cliente {
     public $nombre;
     public $rut;
     public $correo;
+    public $datosc =array();
 
     /**
      *
@@ -35,12 +36,16 @@ abstract class Cliente {
         //  var_dump($this->pedidos);
     }
 
-    public function datoCliente() {
-        return json_encode(array(
+    public function datoCliente($nombre,$rut,$correo) {
+        $this->nombre=$nombre;
+        $this->rut=$rut;
+        $this->correo=$correo;
+
+        return array(
             'nombre' => $this->nombre,
             'rut' => $this->rut,
             'correo' => $this->correo
-        ), JSON_PRETTY_PRINT);
+        );
     }
 
     public function getPedidos() {

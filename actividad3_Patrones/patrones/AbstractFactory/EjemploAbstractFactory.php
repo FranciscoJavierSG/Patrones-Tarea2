@@ -1,10 +1,12 @@
 <?php
-namespace EjemploAbstractFactory;
+
+namespace AbstractFactory;
 
 use Exception;
 
 require_once 'models/masaNormal.class.php';
 require_once 'models/masaDelgada.class.php';
+require_once 'models/fabricaPizza.class.php';
 
 class EjemploAbstractFactory
 {
@@ -25,15 +27,19 @@ class EjemploAbstractFactory
 
     public function generar()
     {
+        
         try {
 
             switch ($this->opcion) {
                 case 1:
+                    
                     //deberia ser masaNormal? o deberia llamar a otra cosa?
                     $fabrica = new masaNormal();
+                    
                     break;
                 case 2:
                     $fabrica = new masaDelgada();
+                    
                     break;
                 default:
                     throw new \Exception("Opción ".$this->opcion." desconocida --Opciones disponibles:: opc 1: masaNormal -opc 2: masaDelgada ");
@@ -41,13 +47,13 @@ class EjemploAbstractFactory
             }
             //revisar bien esto
             for ($i = 0; $i < $this->num_masaNormal; $i++) {
-                $masaNormal[$i] = $fabrica->creaPizzaNormal('Normal'. $i, 'Normal', 'extra', 'tomate' );
+                $masaNormal[$i] = $fabrica->creaPizzaNormal('Normal'. $i, 'Normal'. $i, 'extra'. $i, 'tomate'. $i );
             }
             for ($i = 0; $i < $this->num_masaDelgada; $i++) {
-                $masaDelgada[$i] = $fabrica->crearPizzaDelgada('Delgada'. $i, 'Normal', 'extra', 'tomate');
+                $masaDelgada[$i] = $fabrica->creaPizzaDelgada('Delgada'. $i, 'Normal'. $i, 'extra'. $i, 'tomate'. $i);
             }
 
-
+            
             $r = array("masaNormal" => $masaNormal,
                 "masaDelgada" => $masaDelgada);
           

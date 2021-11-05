@@ -23,7 +23,6 @@ class PizzaDelgada extends Pizza
       
 
         return array(
-            'tipo' =>  "Delgada",
             'tipoMasa' =>  $this->tipoMasa,
         'tamaño' => $this->tamaño,
         'cantidadQueso' => $this->cantidadQueso,
