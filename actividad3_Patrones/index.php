@@ -82,7 +82,7 @@ try{
         default:
         throw new \Exception("Opción ".$this->opcion." desconocida --Opciones disponibles:: opc 1: FabricaVehiculosElectricos -opc 2: FabricaVehiculoGasolina ");
     }
-    $pizzaDelgada = $fabrica ->crearPizzaDelgada('Delgada','XL','extra','tomate');
+    $pizzaDelgada = $fabrica ->creaPizzaDelgada('Delgada','XL','extra','tomate');
     $pizzaNormal = $fabrica ->creaPizzaNormal('Normal','S','extra','tomate');
 
 }catch (Exception $e) {

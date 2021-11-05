@@ -16,8 +16,25 @@ class MasaDelgada implements FabricaPizza {
      * @param string $seleccionarIngredientes // definir esto            
      * @return PizzaDelgada
      */
-    public function crearPizzaDelgada($tipoMasa, $tamaño, $cantidadQueso,  $seleccionarIngredientes) {
+    public function creaPizzaDelgada($tipoMasa, $tamaño, $cantidadQueso,  $seleccionarIngredientes) {
         return new PizzaDelgada(
+            $tipoMasa,
+            $tamaño,
+            $cantidadQueso,
+            $seleccionarIngredientes
+        );
+    }
+
+    /**
+     *
+     * @param string $tipoMasa            
+     * @param string $tamaño            
+     * @param string $cantidadQueso            
+     * @param string $seleccionarIngredientes // definir esto            
+     * @return PizzaNormal
+     */
+    public function creaPizzaNormal($tipoMasa, $tamaño, $cantidadQueso,  $seleccionarIngredientes) {
+        return new PizzaNormal(
             $tipoMasa,
             $tamaño,
             $cantidadQueso,
